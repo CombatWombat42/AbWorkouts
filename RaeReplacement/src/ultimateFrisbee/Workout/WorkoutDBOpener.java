@@ -19,13 +19,6 @@ public class WorkoutDBOpener extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		db.execSQL("CREATE TABLE " + WORKOUT_TN + "(workout TEXT PRIMARY KEY, paired INTEGER)");
-		RaeReplacementActivity.addWorkout("Scissors",0);
-		RaeReplacementActivity.addWorkout("Bicycle ",0);
-		RaeReplacementActivity.addWorkout("Vertical Leg Crunch",0);
-		RaeReplacementActivity.addWorkout("Long Arm Crunch",0);
-		RaeReplacementActivity.addWorkout("Reverse Crunch",0);
-		RaeReplacementActivity.addWorkout("Plank on Elbows and Toes",0);
-		RaeReplacementActivity.addWorkout("Side Crunch",1);
 
 	}
 

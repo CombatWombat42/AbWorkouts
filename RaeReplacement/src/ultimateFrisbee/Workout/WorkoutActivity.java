@@ -43,7 +43,7 @@ public class WorkoutActivity extends Activity {
 		long workoutLength = (long) (extras.getFloat(RaeReplacementActivity.TOTAL_LENGTH)*MIN_TO_MILLS);
 		long segmentLength= (long) (extras.getFloat(RaeReplacementActivity.SEGMENT_LENGTH)*MIN_TO_MILLS);
 		if(extras != null){
-			Toast.makeText(this, "Segment length is: " + segmentLength +" Total length is: " + workoutLength, Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Segment length is: " + segmentLength/MIN_TO_MILLS +" Total length is: " + workoutLength/MIN_TO_MILLS, Toast.LENGTH_LONG).show();
 		}
 		//setup local fields and elements
 		tempWorkout = null;

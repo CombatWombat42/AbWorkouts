@@ -35,7 +35,17 @@ public class RaeReplacementActivity extends Activity {
         //setup db
 		workoutDBOpenerHelper = new WorkoutDBOpener(this);
 		workoutDB = workoutDBOpenerHelper.getWritableDatabase();
-
+		try{
+		RaeReplacementActivity.addWorkout("Scissors",0);
+		RaeReplacementActivity.addWorkout("Bicycle ",0);
+		RaeReplacementActivity.addWorkout("Vertical Leg Crunch",0);
+		RaeReplacementActivity.addWorkout("Long Arm Crunch",0);
+		RaeReplacementActivity.addWorkout("Reverse Crunch",0);
+		RaeReplacementActivity.addWorkout("Plank on Elbows and Toes",0);
+		RaeReplacementActivity.addWorkout("Side Crunch",1);
+		}finally{
+			
+		}
         
         //setup buttons
         addPairedWorkout = (Button) findViewById(R.id.AddPairedWorkout);        
@@ -119,7 +129,7 @@ public class RaeReplacementActivity extends Activity {
     	ContentValues values = new ContentValues();
 		  values.put("workout", workoutName);
 		  values.put("paired", paired);
-		  if(workoutDB.insertOrThrow(WorkoutDBOpener.WORKOUT_TN, null, values)==-1){
+		  if(workoutDB.insert(WorkoutDBOpener.WORKOUT_TN, null, values)==-1){
 			  Log.d(RAE_REPLACEMENT_DEBUG_TAG, "Workout already in database");
 		  }
     }
